@@ -1,9 +1,12 @@
 import urllib.request , sys
-c = open("clone.html", 'w')
+output = open("clone.html", 'w')
 def clone(url):
     response = urllib.request.urlopen(url)
     html = response.read()
     html = html.decode()
-    print(html, file=c)
+    return html
 
-clone(sys.argv[1])
+user_input = input("Enter the link of the website you want to clone : ")
+
+print(clone(user_input), file=output)
+print("website cloned successfully, check clone.html :)")
