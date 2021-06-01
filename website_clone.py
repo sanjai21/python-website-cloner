@@ -1,4 +1,4 @@
-import urllib.request , sys
+import urllib.request 
 output = open("clone.html", 'w')
 def clone(url):
     response = urllib.request.urlopen(url)
